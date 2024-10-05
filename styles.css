@@ -9,28 +9,118 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    min-height: 100vh;
     background-color: #f5f5f5;
 }
 
 /* Estilos do cabeçalho */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Efeitos de decoração no header */
+header::before,
+header::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    top: -50px;
+    left: -75%;
+    transform: rotate(30deg);
+    animation: headerWaves 8s ease-in-out infinite;
+}
+
+header::after {
+    top: 20px;
+    left: -70%;
+    transform: rotate(-30deg);
+    animation: headerWavesReverse 8s ease-in-out infinite;
+}
+
+/* Animação das ondas */
+@keyframes headerWaves {
+    0% {
+        transform: rotate(30deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(30deg) translateX(50%);
+    }
+
+    100% {
+        transform: rotate(30deg) translateX(0);
+    }
+}
+
+@keyframes headerWavesReverse {
+    0% {
+        transform: rotate(-30deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(-30deg) translateX(50%);
+    }
+
+    100% {
+        transform: rotate(-30deg) translateX(0);
+    }
+}
+
+/* Título principal no header */
 header h1 {
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-out both;
 }
 
+/* Animação para o título */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtítulo no header */
 header p {
     font-size: 1.2rem;
-    color: #666;
+    color: #f5f5f5;
     margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1.5s ease-out both;
 }
 
-/* Seção principal com imagem de fundo */
+/* Animação para o subtítulo */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos do conteúdo principal com imagem de fundo */
 .background-image {
     width: 100%;
     height: 60vh;
@@ -40,12 +130,18 @@ header p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 /* Div centralizada para a imagem do ODS e o botão */
 .content {
     text-align: center;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
 }
 
 .ods-image {
@@ -53,7 +149,6 @@ header p {
     height: 200px;
     margin-bottom: 20px;
     object-fit: cover;
-    margin: auto;
 }
 
 /* Estilos do botão */
@@ -61,15 +156,43 @@ header p {
     background-color: #28a745;
     color: white;
     font-size: 1.5rem;
-    padding: 15px 30px;
+    padding: 15px 40px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .start-button:hover {
     background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:active {
+    background-color: #1e7e34;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
 }
 
 /* Responsividade */
@@ -85,6 +208,10 @@ header p {
 
     .start-button {
         font-size: 1.2rem;
-        padding: 10px 20px;
+        padding: 10px 30px;
+    }
+
+    footer p {
+        font-size: 12px;
     }
 }
