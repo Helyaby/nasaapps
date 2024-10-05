@@ -94,6 +94,7 @@ header p {
 }
 
 .ods-image {
+    border-radius: 20px;
     width: 200px;
     height: 200px;
     margin-bottom: 20px;
