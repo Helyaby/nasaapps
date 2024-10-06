@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo ODS 13</title>
+    <link rel="stylesheet" href="style-tela-do-quiz-ods-13.css">
+</head>
+<body>
+    <!-- Cabeçalho do jogo -->
+    <header>
+        <h1>Teste seus conhecimentos sobre o ODS 13</h1>
+        <p>Responda "Sim" ou "Não" às perguntas abaixo.</p>
+    </header>
+
+    <!-- Div para as perguntas e imagem do personagem -->
+    <div class="quiz-container">
+        <img id="question-img" src="q1.png" alt="Personagem Pergunta 1" class="character-img">
+
+        <!-- Texto da pergunta -->
+        <p id="question-text">1. As mudanças climáticas são causadas apenas por fenômenos naturais?</p>
+
+        <!-- Botões de resposta -->
+        <button class="answer-button" onclick="checkAnswer(true)">Sim</button>
+        <button class="answer-button" onclick="checkAnswer(false)">Não</button>
+
+        <!-- Mensagem de erro/sucesso -->
+        <p id="feedback-message"></p>
+    </div>
+
+    <!-- Tabela de conclusão (inicialmente escondida) -->
+    <div id="final-message" class="hidden">
+        <table>
+            <tr>
+                <td>Muito bem!</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Script do jogo -->
+    <script src="script-tela-do-quiz.js"></script>
+</body>
+</html>
