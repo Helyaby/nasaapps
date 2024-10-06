@@ -76,8 +76,8 @@ header p {
     background-position: center;
     background-size: cover; /* Garante que a imagem cubra toda a tela */
     z-index: -1; /* Mantém a imagem atrás do conteúdo */
-    filter: blur(8px); /* Desfoque da imagem */
-    opacity: 0.6; /* Deixa a imagem mais suave, ajustando a opacidade */
+    filter: blur(5px); /* Desfoque da imagem */
+    opacity: 0.8; /* Deixa a imagem mais suave, ajustando a opacidade */
 }
 
 /* Div centralizada para a imagem do ODS e o botão */
@@ -94,8 +94,8 @@ header p {
 
 .ods-image {
     border-radius: 20px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 20px;
     object-fit: cover;
     

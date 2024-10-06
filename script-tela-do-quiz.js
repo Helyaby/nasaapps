@@ -76,10 +76,10 @@ function checkAnswer(selectedIndex) {
     
     if (selectedIndex === question.correctAnswer) {
         score += 200; // Resposta correta
-        document.getElementById('feedback-message').textContent = 'Correto!';
+        document.getElementById('feedback-message').textContent = 'Correto! +200pts';
     } else if (selectedIndex === question.partialAnswer) {
         score += 100; // Resposta parcialmente correta
-        document.getElementById('feedback-message').textContent = 'Parcialmente correto!';
+        document.getElementById('feedback-message').textContent = 'Parcialmente correto! +100pts';
     } else {
         document.getElementById('feedback-message').textContent = 'Resposta incorreta!';
     }
@@ -95,14 +95,14 @@ function checkAnswer(selectedIndex) {
 
     if (selectedIndex === question.correctAnswer) {
         score += 200; // Resposta correta
-        document.getElementById('feedback-message').textContent = 'Correto!';
+        document.getElementById('feedback-message').textContent = 'Correto! +200pts';
         characterImg.src = "correto.png"; // Mudar imagem para correta
     } else if (selectedIndex === question.partialAnswer) {
         score += 100; // Resposta parcialmente correta
-        document.getElementById('feedback-message').textContent = 'Parcialmente correto!';
+        document.getElementById('feedback-message').textContent = 'Parcialmente correto! +100pts';
         characterImg.src = "corretoparcial.png"; // Mudar imagem para parcialmente correta
     } else {
-        document.getElementById('feedback-message').textContent = 'Resposta incorreta!';
+         document.getElementById('feedback-message').textContent = 'Resposta incorreta!';
         characterImg.src = "errado.png"; // Mudar imagem para incorreta
     }
 
@@ -149,7 +149,6 @@ document.getElementById('restart-button').addEventListener('click', () => {
 // Adiciona evento de clique para reiniciar o quiz
 document.getElementById('restart-button').addEventListener('click', startQuiz);
 
+
 // Inicia o quiz ao carregar a página
 startQuiz();
-
-
