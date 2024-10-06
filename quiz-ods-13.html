@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo ODS 13</title>
     <link rel="stylesheet" href="style-tela-do-quiz-ods-13.css">
+    <title>Quiz ODS 13</title>
 </head>
 <body>
-    <!-- Cabeçalho do jogo -->
+    <!-- Header -->
     <header>
         <h1>Teste seus conhecimentos sobre o ODS 13</h1>
-        <p>Responda "Sim" ou "Não" às perguntas abaixo.</p>
+        <p>Responda as perguntas abaixo.</p>
     </header>
 
-    <!-- Div para as perguntas e imagem do personagem -->
+    <!-- Contêiner do quiz -->
     <div class="quiz-container">
-        <img id="question-img" src="q1.png" alt="Personagem Pergunta 1" class="character-img">
-
+        <!-- Imagem ilustrativa -->
+        <img src="q1.png" alt="Character" id="character-img" class="character-img">
+        
         <!-- Texto da pergunta -->
-        <p id="question-text">1. As mudanças climáticas são causadas apenas por fenômenos naturais?</p>
-
+        <p id="question-text"></p>
+        
+        <div id="feedback-message"></div>
         <!-- Botões de resposta -->
-        <button class="answer-button" onclick="checkAnswer(true)">Sim</button>
-        <button class="answer-button" onclick="checkAnswer(false)">Não</button>
+        <div id="answer-buttons"></div>
 
-        <!-- Mensagem de erro/sucesso -->
-        <p id="feedback-message"></p>
+        <!-- Mensagem de feedback -->
+
     </div>
 
-    <!-- Tabela de conclusão (inicialmente escondida) -->
+    <!-- Mensagem final após o quiz -->
     <div id="final-message" class="hidden">
-        <table>
-            <tr>
-                <td>Muito bem!</td>
-            </tr>
-        </table>
+        <h2>Você terminou o quiz!</h2>
+        
+        <!-- Pontuação final -->
+        <p id="final-score"></p>
+
+        <!-- Tabela de ranking -->
+        <h3>Ranking</h3>
+        <div style="background-color: #8BC34A; padding: 10px;">
+            <div style="background-color: #4CAF50; padding: 5px;">
+                <span style="font-size: 125%;">1. Você</span>
+            </div>
+            <p id="final-score-table" style="font-size: 150%;"></p>
+        </div>
+
+        <!-- Botão para reiniciar o quiz -->
+        <button id="restart-button" style="margin: 10px;">Tentar Novamente</button>
+        <button id="est" style="margin: 30px;"><a href="tela-inicial.html">Voltar ao início</a></button>
     </div>
 
-    <!-- Script do jogo -->
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Projeto ODS 13 - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Arquivo JavaScript -->
     <script src="script-tela-do-quiz.js"></script>
 </body>
 </html>
