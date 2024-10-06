@@ -76,11 +76,14 @@ function checkAnswer(selectedIndex) {
     
     if (selectedIndex === question.correctAnswer) {
         score += 200; // Resposta correta
+        document.getElementById('feedback-message').style.color="green";
         document.getElementById('feedback-message').textContent = 'Correto! +200pts';
     } else if (selectedIndex === question.partialAnswer) {
+        document.getElementById('feedback-message').style.color="orange";
         score += 100; // Resposta parcialmente correta
         document.getElementById('feedback-message').textContent = 'Parcialmente correto! +100pts';
     } else {
+        document.getElementById('feedback-message').style.color="red";
         document.getElementById('feedback-message').textContent = 'Resposta incorreta!';
     }
 
@@ -94,14 +97,17 @@ function checkAnswer(selectedIndex) {
     const characterImg = document.getElementById('character-img');
 
     if (selectedIndex === question.correctAnswer) {
+        document.getElementById('feedback-message').style.color="green";
         score += 200; // Resposta correta
         document.getElementById('feedback-message').textContent = 'Correto! +200pts';
         characterImg.src = "correto.png"; // Mudar imagem para correta
     } else if (selectedIndex === question.partialAnswer) {
+        document.getElementById('feedback-message').style.color="orange";
         score += 100; // Resposta parcialmente correta
         document.getElementById('feedback-message').textContent = 'Parcialmente correto! +100pts';
         characterImg.src = "corretoparcial.png"; // Mudar imagem para parcialmente correta
     } else {
+        document.getElementById('feedback-message').style.color="red";
          document.getElementById('feedback-message').textContent = 'Resposta incorreta!';
         characterImg.src = "errado.png"; // Mudar imagem para incorreta
     }
