@@ -95,7 +95,7 @@ header p {
 }
 
 #restart-button {
-    padding: 10px 20px;
+    padding: 25px 25px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
@@ -142,7 +142,7 @@ header p {
 }
 
 #est {
-    padding: 20px 40px;
+    padding: 25px 25px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
